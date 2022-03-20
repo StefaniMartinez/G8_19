@@ -41,6 +41,7 @@ switch($_GET["op"]){
     case "DeleteFactura":
         $datos=$facturas->delete_factura($body["ID"]);
         echo json_encode($datos);
+        echo json_encode("Factura del Cliente Eliminado");
     break;
     
 }
