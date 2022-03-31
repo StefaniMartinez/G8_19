@@ -34,13 +34,14 @@ switch($_GET["op"]){
     break;    
 
     case "UpdateFactura":
-        $datos=$facturas->update_factura($body["ID"],$body["DETALLE"],$body["TOTAL"],$body["ESTADO"]);
+        $datos=$facturas->update_factura($body["ID"],$body["NUMERO_FACTURA"],$body["ID_SOCIO"],$body["FECHA_FACTURA"],$body["DETALLE"],$body["SUB_TOTAL"],$body["TOTAL_ISV"],$body["TOTAL"],$body["FECHA_VENCIMIENTO"],$body["ESTADO"]);
         echo json_encode("Factura del Cliente Actualizado");
     break;
 
     case "DeleteFactura":
         $datos=$facturas->delete_factura($body["ID"]);
         echo json_encode($datos);
+        echo json_encode("Factura del Cliente Eliminado");
     break;
     
 }
