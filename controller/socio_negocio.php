@@ -1,7 +1,7 @@
 <?php
-    if ($_SERVER[ 'REQUEST_METHOD']=== 'OPTIONS'){
+    if ($_SERVER['REQUEST_METHOD']=== 'OPTIONS'){
      header('Access-Control-Allow-Origin: *');
-     header('Access-Control-Allow-Mthods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
+     header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
      header('Access-Control-Allow-Headers: token, Content-Type');
      header('Access-Control-Max-Age: 1728000');
      header('Content-Length: 0');
@@ -9,7 +9,7 @@
      die();
     }
     header('Access-Control-Allow-Origin: *');
-    header('Content_Type: application/json');
+    header('Content-Type: application/json');
 
     require_once("../config/conexion.php");
     require_once("../models/Socio_Negocio.php");
